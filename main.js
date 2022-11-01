@@ -8,6 +8,17 @@
         document.querySelectorAll(".portada img")
         .forEach(img => img.remove());
 
+        var elemDiv = document.createElement('div');
+        elemDiv.className = "container fluid text-center"
+        document.body.appendChild(elemDiv)
+        let elements = []
+        elements = document.body.getElementsByTagName("*");
+        console.log(document.body.getElementsByClassName("container fluid text-center")[0])
+        for (let e of elements) {
+            document.body.removeChild(e)
+            document.body.getElementsByClassName("container fluid text-center")[0].appendChild(e)
+        }
+        console.log(document.body)
     })
 /*let proba=document.getElementById("id_jenui_1997")
 console.log(proba)*/
